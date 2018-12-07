@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 1170669097}
   - component: {fileID: 1170669098}
   - component: {fileID: 1170669099}
+  - component: {fileID: 1170669100}
   m_Layer: 0
   m_Name: Skeletos
   m_TagString: Untagged
@@ -638,8 +639,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f51a0a5a80c4880b01cda32f4c80b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 4
+  knockbackSpeed: 10
+  knockbackDuration: 0.25
+  invincibleDuration: 0.5
   health: 0
+  invincible: 0
+  knockback: 0
   speed: 2
   timeThinkMin: 1
   timeThinkMax: 4
@@ -669,6 +675,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abd9e490dd6b4787a214b53c3694862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1170669100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170669091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edd77fbbc6154a08bdde305bac9738a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 1
 --- !u!1 &1485323215
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,10 +820,14 @@ MonoBehaviour:
   attackDelay: 0.5
   transitionDelay: 0.5
   maxHealth: 10
+  knockbackSpeed: 10
+  knockbackDuration: 0.25
+  invincibleDuration: 0.5
   dirHeld: -1
   facing: 1
   mode: 0
   numKeys: 1
+  invincible: 0
   _health: 0
 --- !u!135 &1485323221
 SphereCollider:
@@ -1138,6 +1161,7 @@ GameObject:
   - component: {fileID: 1961938964}
   - component: {fileID: 1961938966}
   - component: {fileID: 1961938965}
+  - component: {fileID: 1961938967}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -1216,3 +1240,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1961938967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961938963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edd77fbbc6154a08bdde305bac9738a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  knockback: 1
