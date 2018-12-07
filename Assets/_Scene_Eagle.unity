@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +209,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e59cf8eafc3b41ed8000d5e29c81768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepInRoom: 0
+  gridMult: 1
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e87b3ada92a4020b8d123fa5283a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drayInRm: {fileID: 1485323222}
+  transTime: 0.5
 --- !u!1 &859258058
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +359,7 @@ GameObject:
   - component: {fileID: 1170669092}
   - component: {fileID: 1170669097}
   - component: {fileID: 1170669098}
+  - component: {fileID: 1170669099}
   m_Layer: 0
   m_Name: Skeletos
   m_TagString: Untagged
@@ -473,6 +502,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keepInRoom: 1
   gridMult: 1
+--- !u!114 &1170669099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170669091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abd9e490dd6b4787a214b53c3694862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1485323215
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +526,8 @@ GameObject:
   - component: {fileID: 1485323219}
   - component: {fileID: 1485323220}
   - component: {fileID: 1485323221}
+  - component: {fileID: 1485323222}
+  - component: {fileID: 1485323223}
   m_Layer: 0
   m_Name: Dray
   m_TagString: Untagged
@@ -600,6 +642,7 @@ MonoBehaviour:
   speed: 5
   attackDuration: 0.25
   attackDelay: 0.5
+  transitionDelay: 0.5
   dirHeld: -1
   facing: 1
   mode: 0
@@ -615,6 +658,30 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1485323222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485323215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e59cf8eafc3b41ed8000d5e29c81768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepInRoom: 0
+  gridMult: 0.5
+--- !u!114 &1485323223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485323215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abd9e490dd6b4787a214b53c3694862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961938963
 GameObject:
   m_ObjectHideFlags: 0
